@@ -1,3 +1,5 @@
+# Ex.No:10 Develop an android application to create a option menu to display menu items using android studio.
+
 ## AIM:
 To create a option menu to display menu items using Android Studio.
 
@@ -21,43 +23,16 @@ Step 7: Save and run the application.
 
 ## PROGRAM:
 ```
+/*
 Program to print the text “optionmenu”.
-Developed by: Surya R
-Registeration Number : 212222040167
+Developed by: Tamizharasi S
+Registeration Number : 212222040170
+*/
 ```
-### Activity_main.xml
-```
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+## MainActivity.java
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:title="Options Menu"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="?android:attr/colorPrimary" />
-
-    <TextView
-        android:id="@+id/helloTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
 ```
-### MainActivity.java
-```
-package com.example.ex_10;
+package com.example.optionmenu;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -91,32 +66,66 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-### options_menu.xml
+
+## optionsmenu.xml
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/search_item"
-        android:title="@string/search" />
-    <item
-        android:id="@+id/upload_item"
-        android:title="@string/upload" />
-    <item
-        android:id="@+id/copy_item"
-        android:title="@string/copy" />
-    <item
-        android:id="@+id/print_item"
-        android:title="@string/print" />
-    <item
-        android:id="@+id/share_item"
-        android:title="@string/share" />
-    <item
-        android:id="@+id/bookmark_item"
-        android:title="@string/bookmark" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/search_item"
+        android:title="Search" />
+    <item android:id="@+id/upload_item"
+        android:title="Upload" />
+    <item android:id="@+id/copy_item"
+        android:title="Copy" />
+    <item android:id="@+id/print_item"
+        android:title="Print" />
+    <item android:id="@+id/share_item"
+        android:title="Share" />
+    <item android:id="@+id/bookmark_item"
+        android:title="BookMark" />
 </menu>
 ```
-## OUTPUT
-![image](https://github.com/user-attachments/assets/f98e027a-7fd3-4a52-ac10-0c05671fa307)
+
+## activity_main.xml
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="Options Menu"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="?android:attr/colorPrimary" />
+
+    <TextView
+        android:id="@+id/helloTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+## OUTPUT:
+
+![image](https://github.com/user-attachments/assets/1fa091f7-4424-4ea4-a2bb-282419ea5bed)
+
+
+![Screenshot from 2024-11-11 16-05-52](https://github.com/user-attachments/assets/4c583037-7133-4688-bb2c-c8f68a1eb0ce)
+
 
 ## RESULT
 The application successfully displays an options menu with various items, and upon selecting any item, a toast message shows the selected item.
+
